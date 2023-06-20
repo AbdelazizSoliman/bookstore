@@ -1,21 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
+import BookForm from './BookForm';
 import Book from './Book';
 import '../App.css';
 
-const Books = ({ booksList }) => {
-  const list = booksList.map((book, key) => (
-    <Book booksListObj={book} key={key} />
-  ));
+const Books = () => {
+  const booksList = useSelector((store) => store.books.booksList);
+
+  const list = booksList.length > 0 ? (
+    booksList.map((book, key) => (
+      <Book book={book} key={key} />
+    ))
+  ) : (
+    <p>No books to display</p>
+  );
   return (
-    <div>
+    <div className="booksCont">
       {list}
+      <hr />
+      <BookForm />
     </div>
   );
-};
-
-Books.propTypes = {
-  booksList: PropTypes.array.isRequired,
 };
 
 export default Books;
