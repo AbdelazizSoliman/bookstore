@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Routes, Route } from 'react-router-dom';
+import Layout from './routes/Layout';
+import Home from './routes/Home';
+import Categories from './routes/Categories';
+import NotMatch from './routes/NotMatch';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="Categories" element={<Categories />} />
+          <Route path="*" element={<NotMatch />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
