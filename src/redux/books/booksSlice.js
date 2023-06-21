@@ -28,8 +28,8 @@ const booksSlice = createSlice({
       const newBook = {
         id: Date.now(),
         title: action.payload[0],
-        category: 'Maths',
         author: action.payload[1],
+        category: action.payload[2],
         completed: 78,
         chapter: 'chapter 67',
       };
