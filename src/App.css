@@ -29,3 +29,56 @@ li {
   flex-direction: column;
   gap: 1rem;
 }
+
+
+.p-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 8rem;
+}
+
+.p-2 svg {
+  width: 70px;
+  height: 70px;
+}
+
+.p-2 svg circle {
+  margin-top: 20px;
+  width: 70px;
+  height: 70px;
+  fill: none;
+  stroke: #0290ff;
+  stroke-width: 6;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  stroke-linecap:initial;
+}
+
+.p-2 svg circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #ddd;
+}
+
+.p-2 svg circle:nth-child(2) {
+  stroke-dashoffset:calc(200 - (200 * 97 / 100));
+  stroke: #0290ff;
+}
+
+.p-2 .infos {
+  display: flex;
+  flex-direction: column;
+  left: 100%;
+  position: absolute;
+  margin-bottom: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.p-2 .infos span {
+  font-family: 'Montserrat', sans-serif;
+  color: #121212;
+  opacity: 0.5;
+}

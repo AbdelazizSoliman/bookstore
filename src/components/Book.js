@@ -47,26 +47,18 @@ const Book = ({ booksListObj }) => {
         </ul>
       </div>
 
-      <div className={styles.completed}>
-        <div className={styles.progressCircle} />
-        <p className={styles.progressCompleted}>
-          <span className={styles.percentage}>
-            97%
-          </span>
-          <span className={styles.completedWord}>Completed</span>
-        </p>
-      </div>
-
-      {/* <article className="middle">
+      <div className="p-2">
         <div className="circle">
-          <CircularProgressbar value={60} />
+          <svg>
+            <circle cx="30" cy="30" r="30" />
+            <circle cx="30" cy="30" r="30" />
+          </svg>
         </div>
-        <div className="progress-text">
-          <p className="percentage">60%</p>
-          <p className="completed">Completed</p>
+        <div className="infos">
+          <h3>97%</h3>
+          <span>completed</span>
         </div>
-      </article> */}
-
+      </div>
       <div className={styles.currentChapter}>
         <p className={styles.currentChapterTitle}>Current Chapter</p>
         <p className={styles.chapter}>chapter 69</p>
