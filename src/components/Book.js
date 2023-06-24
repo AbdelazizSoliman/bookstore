@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import { CircularProgressbar } from 'react-circular-progressbar';
 import { useDispatch } from 'react-redux';
 import { deleteBook, fetchBooks } from '../redux/books/booksSlice';
 import '../App.css';
@@ -55,6 +56,16 @@ const Book = ({ booksListObj }) => {
           <span className={styles.completedWord}>Completed</span>
         </p>
       </div>
+
+      {/* <article className="middle">
+        <div className="circle">
+          <CircularProgressbar value={60} />
+        </div>
+        <div className="progress-text">
+          <p className="percentage">60%</p>
+          <p className="completed">Completed</p>
+        </div>
+      </article> */}
 
       <div className={styles.currentChapter}>
         <p className={styles.currentChapterTitle}>Current Chapter</p>

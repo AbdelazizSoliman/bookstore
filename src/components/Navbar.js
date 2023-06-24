@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import { IoMdContact } from 'react-icons/io';
+// import { IoMdContact } from 'react-icons/io';
+// import { ImUser } from 'react-icons/ImUser'
+import { ImUser } from '@react-icons/all-files/im/ImUser';
 import styles from '../styles/Navbar.module.css';
 
 const links = [
@@ -20,7 +22,9 @@ const Navbar = () => (
         ))}
       </ul>
     </div>
-    <IoMdContact className={styles.icon} />
+    <div className="profile">
+      <ImUser className={styles.icon} />
+    </div>
   </nav>
 );
 export default Navbar;
