@@ -30,7 +30,6 @@ li {
   gap: 1rem;
 }
 
-
 .p-2 {
   display: flex;
   align-items: center;
@@ -55,7 +54,7 @@ li {
   transform: translate(5px, 5px);
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
-  stroke-linecap:initial;
+  stroke-linecap: initial;
 }
 
 .p-2 svg circle:nth-child(1) {
@@ -64,7 +63,7 @@ li {
 }
 
 .p-2 svg circle:nth-child(2) {
-  stroke-dashoffset:calc(200 - (200 * 97 / 100));
+  stroke-dashoffset: calc(200 - (200 * 97 / 100));
   stroke: #0290ff;
 }
 
