@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addNewBook, fetchBooks } from '../redux/books/booksSlice';
+import styles from '../styles/BookForm.module.css';
 
 const BookForm = () => {
   const categories = ['Action', 'ScienceFiction', 'Maths', 'Economy'];
@@ -39,16 +40,16 @@ const BookForm = () => {
   };
 
   return (
-    <div className="formContainer">
-      <p className="formTitle">ADD NEW BOOK</p>
-      <form className="form">
+    <div className={styles.formContainer}>
+      <p className={styles.formTitle}>ADD NEW BOOK</p>
+      <form className={styles.form}>
         <input
           type="text"
           name="title"
           value={book.title}
           placeholder="Book title"
           onChange={handleChange}
-          className="input"
+          className={styles.input}
         />
         <input
           type="text"
@@ -56,13 +57,13 @@ const BookForm = () => {
           value={book.author}
           placeholder="Book author"
           onChange={handleChange}
-          className="input"
+          className={styles.input}
         />
         <select
           name="category"
           value={book.category}
           onChange={handleChange}
-          className="select"
+          className={styles.select}
         >
           <option value="" disabled>
             Category
@@ -71,7 +72,7 @@ const BookForm = () => {
         </select>
         <button
           type="submit"
-          className="submitButton"
+          className={styles.submitButton}
           onClick={handleSubmit}
         >
           ADD BOOK

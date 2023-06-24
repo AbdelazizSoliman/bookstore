@@ -1,0 +1,109 @@
+.bookCard {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  justify-content: space-between;
+  border: 1px solid gray;
+  border-radius: 6px;
+  padding: 2rem;
+  min-width: 80%;
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.category,
+.completedWord,
+.currentChapterTitle {
+  color: #121212;
+  opacity: 0.5;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.author {
+  color: rgba(2, 144, 255, 0.8);
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.button,
+.button1 {
+  border: none;
+  border-left: solid 1px rgba(128, 128, 128, 0.418);
+  background-color: transparent;
+  color: rgba(2, 144, 255, 0.8);
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.button1 {
+  border: none;
+  padding-left: 0;
+}
+
+.completed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progressCompleted {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.percentage {
+  color: #121212;
+  font-size: 2rem;
+}
+
+.progressCircle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 10px solid #0290ff;
+  clip-path: polygon(97% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.currentChapter {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 5rem;
+}
+
+.progressButton {
+  height: 2.5rem;
+  background-color: #0290ff;
+  border: 2px solid transparent;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.progressButton:hover {
+  color: #0290ff;
+  border: 2px solid #0290ff;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s ease;
+}

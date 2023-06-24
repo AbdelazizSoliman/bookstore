@@ -1,80 +1,83 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.navbar {
-  background-color: #fff;
-  height: 6rem;
-  padding: 0 6.25rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.links {
-  display: flex;
-  gap: 3rem;
-}
-
-.title,
-.author {
-  color: #0290ff;
-  font-size: 1.875rem;
-  font-weight: bold;
-}
-
-.navList {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
-
-.navLink:hover {
-  opacity: 0.5;
-}
-
-.icon {
-  color: #0290ff;
-  width: 2rem;
-  height: 2rem;
+a {
+  text-decoration: none;
+  color: black;
 }
 
 li {
   list-style: none;
+}
+
+.BookStore-CMS {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home {
+  background-color: #fafafa;
+  padding: 3rem 6.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.p-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 8rem;
+}
+
+.p-2 svg {
+  width: 70px;
+  height: 70px;
+}
+
+.p-2 svg circle {
+  margin-top: 20px;
+  width: 70px;
+  height: 70px;
+  fill: none;
+  stroke: #0290ff;
+  stroke-width: 6;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  stroke-linecap: initial;
+}
+
+.p-2 svg circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #ddd;
+}
+
+.p-2 svg circle:nth-child(2) {
+  stroke-dashoffset: calc(200 - (200 * 97 / 100));
+  stroke: #0290ff;
+}
+
+.p-2 .infos {
+  display: flex;
+  flex-direction: column;
+  left: 100%;
+  position: absolute;
+  margin-bottom: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.p-2 .infos span {
+  font-family: 'Montserrat', sans-serif;
+  color: #121212;
+  opacity: 0.5;
 }
