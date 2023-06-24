@@ -35,7 +35,7 @@ const Books = () => {
     <Book booksListObj={book} key={key} />
   ));
   return (
-    <div className="">
+    <div className="BookStore-CMS">
       {list}
       <hr />
       <BookForm />
