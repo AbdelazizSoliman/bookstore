@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { addNewBook, fetchBooks } from '../redux/books/booksSlice';
 
 const BookForm = () => {
   const categories = ['Action', 'ScienceFiction', 'Maths', 'Economy'];
@@ -15,7 +15,7 @@ const BookForm = () => {
   const [book, setBook] = useState({
     title: '',
     author: '',
-    categories: '',
+    category: '',
   });
 
   const handleChange = (e) => {
@@ -25,17 +25,19 @@ const BookForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const info = [book.title, book.author, book.category];
-    if (info[0] !== '' || info[1] !== '') {
-      dispatch(addBook(info));
+    const Info = [book.title, book.author, book.category];
+    if (Info[0] !== '' || Info[1] !== '' || Info[2] !== '') {
+      await dispatch(addNewBook(Info));
+      dispatch(fetchBooks());
       setBook({
         ...book,
         categories: book.category,
       });
     }
   };
+
   return (
     <div className="formContainer">
       <p className="formTitle">ADD NEW BOOK</p>
@@ -47,7 +49,6 @@ const BookForm = () => {
           placeholder="Book title"
           onChange={handleChange}
           className="input"
-          required
         />
         <input
           type="text"
@@ -56,14 +57,12 @@ const BookForm = () => {
           placeholder="Book author"
           onChange={handleChange}
           className="input"
-          required
         />
         <select
           name="category"
           value={book.category}
           onChange={handleChange}
           className="select"
-          required
         >
           <option value="" disabled>
             Category
